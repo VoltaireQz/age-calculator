@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./output.css">
+  <title>Test</title>
+
+
+</head>
+<body class=" font-poppins bg-gray-200 flex justify-center items-center min-h-screen min-w-screen"> 
+<div class="bg-white rounded-lg rounded-br-[20%] w-[90%] flex flex-col md:w-[50%] ">
+
+  <div class=" inputs my-10 mb-15 w-full flex flex-row justify-center gap-6 md:justify-start md:pl-10">
+
+    <div class=" w-[25%] flex flex-col md:w-[17%]">
+      <p class="font-bold text-gray-500 text-xs mb-1 tracking-[0.2rem]">DAY</p>
+      <input class=" field w-full border-[1px] border-solid border-gray-200 rounded-md py-2 px-3 text-center font-bold focus:outline-none " type="number" id="day-input">
+      <p class="text-xs text-red-500 mt-1 hidden" id="day-error">Enter a valid Input</p>
+    </div>
+    <div class=" w-[25%] flex flex-col md:w-[17%]">
+      <p class="font-bold text-gray-500 text-xs mb-1 tracking-[0.2rem]">MONTH</p>
+      <input class=" field w-full border-[1.5px] border-solid border-gray-200 rounded-md py-2 px-3 text-center font-bold focus:outline-none " type="number" id="month-input">
+      <p class="text-xs text-red-500 mt-1 hidden" id="month-error">Enter a valid Input</p>
+    </div>
+    <div class=" w-[25%] flex flex-col md:w-[17%]">
+      <p class="font-bold text-gray-500 text-xs mb-1 tracking-[0.2rem]">YEAR</p>
+      <input class=" field w-full border-[1.5px] border-solid border-gray-200 rounded-md py-2 px-3 text-center font-bold focus:outline-none " type="number" id="year-input">
+      <p class="text-xs text-red-500 mt-1 hidden" id="year-error">Enter a valid Input</p>
+    </div>
+    
+  </div>
+
+  <div class=" relative w-full flex flex-row justify-center items-center mb-10 cursor-pointer md:w-[95%]" >
+    <div class=" flex justify-center items-center absolute rounded-full w-15 h-15 bg-purple-600 md:right-0 md:translate-x-0" onclick="calculateAge();">
+      <img class="object-contain w-1/2 h-1/2" src="./assets/icon-arrow.svg" alt="">
+    </div>
+    <hr class="w-[85%] mx-auto border-t-[2px] border-gray-200">
+  </div>
+
+  <div class="w-full my-15 ml-10">
+    <p class="font-bold text-5xl italic text-neutral-800 md:text-7xl"><span class="mr-2 text-purple-600" id="year-output">--</span>years</p>
+     
+    <p class="font-bold text-5xl italic text-neutral-800 md:text-7xl"><span class="mr-2 text-purple-600" id="month-output">--</span>months</p>
+
+    <p class="font-bold text-5xl italic text-neutral-800 md:text-7xl"><span class="mr-2 text-purple-600" id="day-output">--</span>days</p>
+  </div>
+
+
+</div>
+<script src="./script.js"></script>
+<style>
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+</style>
+</body>
+</html>
